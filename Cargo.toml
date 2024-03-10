@@ -1,0 +1,23 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "^4"
+# Generates random UUIDs
+uuid = {version = "1.7.0", features = ["v4"]}
+# Serialises and de-serialise objects with JSON
+serde = {version = "1.0.197", features = ["derive"]}
+# AES config and dynamoDB crates
+aws-config = "1.1.7"
+aws-sdk-dynamodb = "1.16.1"
+# Shows requests recieved by Actix Web
+env_logger = "0.11.3"
+log = "^0.4"
+# Helps handling ENUMS
+strum_macros = "0.26.1"
+strum = {version = "0.26.1", features = ["derive"]}
+derive_more = "^0.99"
